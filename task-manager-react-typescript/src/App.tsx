@@ -1,9 +1,14 @@
 import React from 'react';
+import { TodoListItem } from './TodoListItem';
+import { Todo } from "./types";
 
-function App() {
-  return (
-    <h1>Hello World</h1>
-  );
-}
+const todos: Array<Todo> = [
+  { text: "Study", complete: true }, 
+  { text: "Code", complete: false }
+];
+
+const App: React.FC = () => {
+  return <TodoListItem />;
+};
 
 export default App;
