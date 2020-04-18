@@ -1,6 +1,5 @@
 import React from 'react';
 import { TodoListItem } from './TodoListItem';
-import { Todo } from "./types";
 
 const todos: Array<Todo> = [
   { text: "Study", complete: true }, 
@@ -8,7 +7,7 @@ const todos: Array<Todo> = [
 ];
 
 const App: React.FC = () => {
-  return <TodoListItem />;
+  return <TodoListItem todo={todos[0]} />;
 };
 
-export default App;
+export default App
