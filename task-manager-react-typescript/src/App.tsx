@@ -23,10 +23,14 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
 
+  const addTodo = (newTodo: string) => {
+    setTodos([...todos, {  text: newTodo, complete: false  }]);
+  };
+
   return (
     <React.Fragment>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
-      <AddTodoForm />
+      <AddTodoForm addTodo={addTodo} />
     </React.Fragment>
   );
 };
