@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 
 export const AddTodoForm: React.FC = () => {
   const [newTodo, setNewTodo] = useState("");
@@ -6,6 +6,10 @@ export const AddTodoForm: React.FC = () => {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setNewTodo(e.target.value);
   };
+
+  const handleSubmit = (e: FormEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+  }
 
   return (
     <form>
