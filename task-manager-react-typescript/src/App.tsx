@@ -24,8 +24,8 @@ const App: React.FC = () => {
 
   return (
     <React.Fragment>
-      <TodoListItem todo={todos[0]} />
-      <TodoListItem todo={todos[1]} />
+      <TodoListItem todo={todos[0]} toggleTodo={toggleTodo} />
+      <TodoListItem todo={todos[1]} toggleTodo={toggleTodo} />
     </React.Fragment>
   );
 };
