@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { TodoList } from "./TodoList";
+import { AddTodoForm } from './AddTodoForm';
 
 const initialTodos: Array<Todo> = [
   { text: "Study", complete: true }, 
@@ -25,6 +26,7 @@ const App: React.FC = () => {
   return (
     <React.Fragment>
       <TodoList todos={todos} toggleTodo={toggleTodo} />
+      <AddTodoForm />
     </React.Fragment>
   );
 };

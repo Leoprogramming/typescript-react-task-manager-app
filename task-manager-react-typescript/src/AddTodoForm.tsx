@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState, ChangeEvent } from "react";
 
-export const AddTodoForm = props => {
+export const AddTodoForm: React.FC = () => {
+  const [newTodo, setNewTodo] = useState("");
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setNewTodo(e.target.value);
+  };
+
   return (
     <form>
-      <input type="text" />
+      <input type="text" value={newTodo} onChange={handleChange} />
       <button type="submit">Add To-Do</button>
     </form>
   );
