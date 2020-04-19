@@ -23,7 +23,7 @@ const App: React.FC = () => {
     setTodos(newTodos);
   };
 
-  const addTodo = (newTodo: string) => {
+  const addTodo: AddTodo = newTodo => {
     setTodos([...todos, {  text: newTodo, complete: false  }]);
   };
 

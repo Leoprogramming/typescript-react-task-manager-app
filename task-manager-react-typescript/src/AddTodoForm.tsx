@@ -2,7 +2,7 @@ import React, { useState, ChangeEvent, FormEvent } from "react";
 
 interface AddTodoFormProps {
   addTodo: AddTodo;
-}
+};
 
 export const AddTodoForm: React.FC<AddTodoFormProps> = ({ addTodo }) => {
   const [newTodo, setNewTodo] = useState("");
